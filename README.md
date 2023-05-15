@@ -2,4 +2,4 @@
 [Website for Conference-X](https://conferencex.github.io/)
 
 # Insert the logo here
-![Logo](./images/cx_logo_nodate.png)
+![Logo](./images/cx_logo_nodate.png){:height="300px" width="300px"}
