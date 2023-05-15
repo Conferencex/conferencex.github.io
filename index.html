@@ -1,0 +1,650 @@
+<!DOCTYPE HTML>
+<!--
+    Dimension by HTML5 UP html5up.net | @ajlkn Free for personal and commercial use under the CCA
+    3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Qudsi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<head>
+    <style>
+        a:link {
+            color: cyan;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: rgb(8, 245, 107);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(216, 185, 250);
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        body {
+            font-family: "Times New Roman";
+            font-size: 1em;
+        }
+    </style>
+    <style>
+        .member {
+            display: flex;
+            align-items: center;
+        }
+    
+        .member img {
+            width: 20%;
+            margin-right: 20px;
+        }
+    </style>
+    <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #484848;
+            background-color: #838383;
+        }
+    
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            color: #000;
+            /* Default text color */
+        }
+    
+        .tab button:hover {
+            background-color: #ff0000;
+        }
+    
+        .tab button.active {
+            background-color: #000000;
+            color: #000;
+            /* Active button text color */
+        }
+    
+        .tab button:not(.active) {
+            background-color: #838383;
+        }
+    
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        .schedule-table th,
+        .schedule-table td {
+            border: 1px solid #cc0000;
+            padding: 8px;
+        }
+    
+        .schedule-table th:nth-child(3) {
+            width: 50%;
+        }
+    </style>
+
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <img class="img-circle" src="./images/cx_logo_nodate.png">
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1> Conference - X </h1>
+                    <p>2-3, October, 2023</p>
+                    <p>10753 Mountain Run Lake Rd, Culpeper, VA 22701</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#registration">Registration</a></li>
+                    <li><a href="#orgcom">Organizing Committee</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <!--li><a href="#elements">Elements</a></li-->
+                </ul>
+            </nav>
+        </header>
+
+        <!---Script to be able to include the html file in the website-->
+        <script>
+            function includeHTML() {
+                var z, i, elmnt, file, xhttp;
+                /*loop through a collection of all HTML elements:*/
+                z = document.getElementsByTagName("*");
+                for (i = 0; i < z.length; i++) {
+                    elmnt = z[i];
+                    /*search for elements with a certain atrribute:*/
+                    file = elmnt.getAttribute("include-html");
+                    if (file) {
+                        /*make an HTTP request using the attribute value as the file name:*/
+                        xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4) {
+                                if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                                if (this.status == 404) { elmnt.innerHTML = "Page Null."; }
+                                /*remove the attribute, and call this function once more:*/
+                                elmnt.removeAttribute("include-html");
+                                includeHTML();
+                            }
+                        }
+                        xhttp.open("GET", file, true);
+                        xhttp.send();
+                        /*exit the function:*/
+                        return;
+                    }
+                }
+            };
+        </script>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- About -->
+            <article id="about">
+                <h2 class="major">About</h2>
+                <span class="image main" style="text-align: center;">
+                    <img src="images/cx_logo.png" alt=""
+                        style="display: block; margin-left: auto; margin-right: auto; width: 300px; height: auto;">
+                </span>
+
+
+                <font size="4em">
+                    <p style="text-align:justify;">
+                    </p>
+                </font>
+
+                <p>Welcome to the inaugural Conference-X, a pioneering event in the field of X-ray imaging and
+                    studies of the Earth's magnetosphere. Taking place this year, Conference-X brings together
+                    experts, researchers, and enthusiasts to explore the fascinating world of X-ray-related studies.
+                </p>
+                
+                <p>With a specific focus on the intersection of X-ray imaging and the Earth's magnetosphere,
+                    Conference-X provides a unique platform for sharing insights, advancements, and breakthroughs in
+                    this specialized field. We are excited to welcome participants from the LEXI (Low-Energy X-ray
+                    Imaging) and SMILE (Solar wind Magnetosphere Ionosphere Link Explorer) projects, as they
+                    contribute their expertise and collaborate with fellow attendees.</p>
+                
+                <p>Conference-X offers a rich program featuring keynote presentations, research paper sessions,
+                    interactive workshops, and networking opportunities. Engage with leading experts, exchange
+                    knowledge, and discover the latest developments in X-ray imaging techniques, data analysis, and
+                    their applications in understanding the Earth's magnetosphere.</p>
+                
+                <p>Join us at Conference-X to expand your horizons, forge new collaborations, and contribute to
+                    the advancement of X-ray studies in the Earth's magnetosphere. Together, let's uncover the
+                mysteries of our planet's magnetic field and delve into the exciting realm of X-ray
+                imaging.</p>
+                    
+                <p>Conference-X is organized by the Boston University and the Catholic University of
+                America.</p>
+                <!--Add a dashed line below this-->
+                <hr>
+                <h3>Conference Location</h3>
+                <h3>Address:</h3>
+                <p>10753 Mountain Run Lake Rd, Culpeper, VA 22701</p>
+                
+                <h4>Directions:</h4>
+                    <p>Use the map below to get to the conference location:</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.117634196833!2d-78.05083770000002!3d38.466214499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b640df45e27e7b%3A0x17d301e8f16edf52!2s10753%20Mountain%20Run%20Lake%20Rd%2C%20Culpeper%2C%20VA%2022701%2C%20USA!5e0!3m2!1sen!2sca!4v1621003528475!5m2!1sen!2sca"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </article>
+
+            <!-- Schedule -->
+            <article id="schedule">
+                <h2 class="major">Schedule</h2>
+                    <div class="tab">
+                        <button class="tablinks" onclick="openDay(event, 'day1')" id="defaultOpen">Day 1 (2nd
+                            October)</button>
+                        <button class="tablinks" onclick="openDay(event, 'day2')">Day 2 (3rd October)</button>
+                    </div>
+                    
+                    <div id="day1" class="tabcontent">
+                        <h2>Day 1 (2nd October)</h2>
+                        <table class="schedule-table">
+                            <tr>
+                                <th>Time</th>
+                                <th>Speaker</th>
+                                <th>Title of the Talk</th>
+                            </tr>
+                            <tr>
+                                <td>9:00 AM - 9:30 AM</td>
+                                <td>Brian Walsh</td>
+                                <td>Welcome Address and General Information</td>
+                            </tr>
+                            <tr>
+                                <td>9:30 AM - 10:00 AM</td>
+                                <td>Speaker 2</td>
+                                <td>Title of Talk 2</td>
+                            </tr>
+                            <tr>
+                                <td>10:00 AM - 10:30 AM</td>
+                                <td>Speaker 3</td>
+                                <td>Title of Talk 3</td>
+                            </tr>
+                            <tr>
+                                <td>10:30 AM - 11:00 AM</td>
+                                <td>-</td>
+                                <td>Coffee Break</td>
+                            </tr>
+                            <tr>
+                                <td>11:00 AM - 11:30 AM</td>
+                                <td>Speaker 4</td>
+                                <td>Title of Talk 4</td>
+                            </tr>
+                            <tr>
+                                <td>11:30 AM - 12:00 PM</td>
+                                <td>Speaker 5</td>
+                                <td>Title of Talk 5</td>
+                            </tr>
+                            <!-- Add more talk slots as needed -->
+                            <tr>
+                                <td>12:30 PM - 2:00 PM</td>
+                                <td>-</td>
+                                <td>Lunch Break</td>
+                            </tr>
+                            <tr>
+                                <td>2:00 PM - 2:30 PM</td>
+                                <td>Speaker 6</td>
+                                <td>Title of Talk 6</td>
+                            </tr>
+                            <tr>
+                                <td>2:30 PM - 3:00 PM</td>
+                                <td>Speaker 7</td>
+                                <td>Title of Talk 7</td>
+                            </tr>
+                            <tr>
+                                <td>3:00 PM - 3:30 PM</td>
+                                <td>Speaker 8</td>
+                                <td>Title of Talk 8</td>
+                            </tr>
+                            <tr>
+                                <td>3:30 PM - 4:00 PM</td>
+                                <td>-</td>
+                                <td>Coffee Break</td>
+                            </tr>
+                            <tr>
+                                <td>4:00 PM - 4:30 PM</td>
+                                <td>Speaker 9</td>
+                                <td>Title of Talk 9</td>
+                            </tr>
+                            <tr>
+                                <td>4:30 PM - 5:00 PM</td>
+                                <td>Speaker 10</td>
+                                <td>Title of Talk 10</td>
+                            </tr>
+                            <!-- Add more talk slots as needed -->
+                        </table>
+                    </div>
+                    
+                    <div id="day2" class="tabcontent">
+                        <h2>Day 2 (3rd October)</h2>
+                        <table class="schedule-table">
+                            <tr>
+                                <th>Time</th>
+                                <th>Speaker</th>
+                                <th>Title of the Talk</th>
+                            </tr>
+                            <tr>
+                                <td>9:00 AM - 9:30 AM</td>
+                                <td>Brian Walsh</td>
+                                <td>Summary of Day 1</td>
+                            </tr>
+                            <tr>
+                                <td>9:30 AM - 10:00 AM</td>
+                                <td>Speaker 11</td>
+                                <td>Title of Talk 11</td>
+                            </tr>
+                            <tr>
+                                <td>10:00 AM - 10:30 AM</td>
+                                <td>Speaker 12</td>
+                                <td>Title of Talk 12</td>
+                            </tr>
+                            <tr>
+                                <td>10:30 AM - 11:00 AM</td>
+                                <td>-</td>
+                                <td>Coffee Break</td>
+                            </tr>
+                            <tr>
+                                <td>11:00 AM - 11:30 AM</td>
+                                <td>Speaker 13</td>
+                                <td>Title of Talk 13</td>
+                            </tr>
+                            <tr>
+                                <td>11:30 AM - 12:00 PM</td>
+                                <td>Speaker 14</td>
+                                <td>Title of Talk 14</td>
+                            </tr>
+                            <tr>
+                                <td>12:30 PM - 2:00 PM</td>
+                                <td>-</td>
+                                <td>Lunch Break</td>
+                            </tr>
+                            <tr>
+                                <td>2:00 PM - 2:30 PM</td>
+                                <td>Speaker 15</td>
+                                <td>Title of Talk 15</td>
+                            </tr>
+                            <tr>
+                                <td>2:30 PM - 3:00 PM</td>
+                                <td>Speaker 16</td>
+                                <td>Title of Talk 16</td>
+                            </tr>
+                            <tr>
+                                <td>3:00 PM - 3:30 PM</td>
+                                <td>Speaker 17</td>
+                                <td>Title of Talk 17</td>
+                            </tr>
+                            <tr>
+                                <td>3:30 PM - 4:00 PM</td>
+                                <td>-</td>
+                                <td>Coffee Break</td>
+                            </tr>
+                            <tr>
+                                <td>4:00 PM - 4:30 PM</td>
+                                <td>Speaker 18</td>
+                                <td>Title of Talk 18</td>
+                            </tr>
+                            <tr>
+                                <td>4:30 PM - 5:00 PM</td>
+                                <td>Speaker 19</td>
+                                <td>Title of Talk 19</td>
+                            </tr>
+                            <tr>
+                                <td>5:00 PM - 5:30 PM</td>
+                                <td>Brian Walsh</td>
+                                <td>Concluding Remarks</td>
+                            <!-- Add more talk slots as needed -->
+
+                        </table>
+                    </div>
+
+            
+    <script>
+        function openDay(evt, dayName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(dayName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+                </font>
+            </article>
+
+            <!--Registration -->
+            <article id="registration">
+                <h2 class="major">Registration</h2>
+                <font size="4em">
+                    <p style="text-align:justify;">Sample tex.</p>
+                </font>
+            </article>
+
+            <!-- Organization Committee -->
+            <article id="orgcom">
+                <h2 class="major">Organizing Committee</h2>
+                <!-- Insert image of committee here with their names and other details to right of
+                the image-->
+                <div class="row">
+                    <div class="column">
+                        <div class="member">
+                            <img src="./images/photo_bw.jpg" alt="Brian">
+                            <div>
+                                <font size="5em">
+                                    <a href="https://sites.bu.edu/bwalsh" target="_blank">
+                                        Brian Walsh</a>
+                                </font>
+                                <font size="3em">
+                                    <p>Boston university</p>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="column">
+                        <div class="member">
+                            <img src="./images/photo_ns.jpg" alt="Nithin">
+                            <div>
+                                <font size="5em">
+                                    <a href="https://nithinsivadas.com/" target="_blank">Nithin Sivadas</a>
+                                </font>
+                                <font size="3em">
+                                    <p>Goddard Space Flight Center</p>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="column">
+                        <div class="member">
+                            <img src="./images/photo_rq.jpg" alt="Ramiz">
+                            <div>
+                                <font size="5em">
+                                    <a href="https://qudsiramiz.space/" target="_blank">Ramiz Qudsi</a>
+
+                                </font>
+                                <font size="3em">
+                                    <p>Boston University</p>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h3 class="major">Contact Us</h3>
+                    <form method="POST" action="https://formspree.io/f/mjvjjgow">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" value="" placeholder="Alpha Zeta" />
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" value="" placeholder="alpha@zeta.gamma" />
+                            </div>
+                            <div class="field half">
+                                <input type="checkbox" id="copy" name="copy">
+                                <label for="copy">Email me a copy</label>
+                            </div>
+                            <div class="field half">
+                                <input type="checkbox" id="human" name="human" unchecked>
+                                <label for="human">Not a robot</label>
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" placeholder="Enter your message"
+                                    rows="6"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </form>
+                    
+                    <div class="container-header">
+                        <div class="grid_5" id="social_icons">
+                            <a style="align-items: left;" itemprop="sameAs" href="https://github.com/qudsiramiz"
+                                target="_blank" rel="noopener"><i class="fab fa-github fa-2x"></i></a>
+                        </div>
+                    
+                        <nav class="topmenu omega">
+                            <ul>
+                                <li>
+                                    <address>
+                                        <a href="mailto:qudsira@bu.edu">Contact Us</a>
+                                    </address>
+                                </li>
+                            </ul>
+                        </nav>
+
+            </article>
+
+            <!-- FAQ -->
+            <article id="faq">
+                    <h3>Frequently Asked Questions</h3>
+                    <dl class="faq-container">
+                        <dt class="faq-question">Q: When and where is Conference-X taking place?</dt>
+                        <dd class="faq-answer">A: Conference-X is scheduled to take place on [date] at [location].
+                        </dd>
+                    </dl>
+                    <dl class="faq-container">
+                        <dt class="faq-question">Q: Who can attend Conference-X?</dt>
+                        <dd class="faq-answer">A: Conference-X is open to researchers,
+                        professionals, students, and enthusiasts interested in X-ray imaging and
+                        magnetospheric studies.</dd>
+                    </dl>
+                    <dl class="faq-container">
+                        <dt class="faq-question">Q: How can I register for the conference?</dt>
+                        <dd class="faq-answer">A: Registration for Conference-X can be done
+                        through our website at [registration link].</dd>
+
+                    </dl>
+                    <dl class="faq-container">
+                        <dt class="faq-question">Q: Are there any submission opportunities for presentations or papers?</dt>
+                        <dd class="faq-answer">A: Yes, we welcome submissions for presentations and research papers related to X-ray imaging in
+                        magnetospheric studies. Please refer to the submission guidelines on our
+                        website.</dd>
+                    </dl>
+                    <dl class="faq-container">
+                        <dt class="faq-question">Q: Will there be networking opportunities at the conference?</dt>
+                        <dd class="faq-answer">A: Absolutely! Conference-X provides ample networking
+                        opportunities to connect with fellow attendees, experts, and researchers in
+                        the field.</dd>
+                    </dl>
+
+                    <dl class="faq-container">
+                        <dt class="faq-question">Q: Is there a fee to attend the conference?</dt>
+                        <dd class="faq-answer">A: Yes, there is a registration fee to attend Conference-X. Details about the registration fees
+                        can be found on our website.</dd>
+                    </dl>
+
+                    <dl class="faq-container">
+                        <dt class="faq-question">Q: Can I present my research findings at the conference?</dt>
+                        <dd class="faq-answer">A: Yes, Conference-X offers a platform for researchers to present their findings through paper
+                        presentations and poster sessions. Please check the submission guidelines for more information.
+                        </dd>
+                    </dl>
+
+                    <dl class="faq-container">
+                        <dt class="faq-question">Q: Will there be any workshops or tutorials at the conference?</dt>
+                        <dd class="faq-answer">A: Yes, Conference-X will feature workshops and tutorials conducted by experts in the field.
+                        Stay tuned for updates on our website.</dd>
+                    </dl>
+                    <dl class="faq-container">
+                        <dt class="faq-question">Q: How can I contact the organizers for further inquiries?</dt>
+                        <dd class="faq-answer">A: For any further inquiries or questions, you can reach out to our organizing team at [email
+                        address] or through our contact form on the website.</dd>
+                    </dl>
+
+                
+                        <!-- Add more FAQ items using the same structure -->
+                    </dl>
+                
+                <script>
+                    // JavaScript code to toggle visibility of FAQ answers on click
+                    const faqQuestions = document.querySelectorAll('.faq-question');
+
+                    faqQuestions.forEach(question => {
+                        question.addEventListener('click', () => {
+                            question.classList.toggle('active');
+                            const answer = question.nextElementSibling;
+                            answer.classList.toggle('show');
+                        });
+                    });
+                </script>
+                
+                <style>
+                    .faq-container {
+                        border: 0.1px solid white;
+                        padding: 2px;
+                        font-size: 16px;
+                    }
+
+                    .faq-question {
+                        cursor: pointer;
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                        color: #ffffff;
+                    }
+
+                    .faq-question.active {
+                        color: green;
+                    }
+                
+                    .faq-answer {
+                        display: none;
+                        margin-left: 20px;
+                    }
+
+                    .faq-answer.show {
+                        display: block;
+                    }
+                </style>
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; Ramiz Qudsi: <a href="https://github.com/qudsiramiz"
+                    target="_blank">GitHub</a>.</p>
+        </footer>
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
