@@ -134,7 +134,7 @@
                     <li><a href="#schedule">Schedule</a></li>
                     <li><a href="#registration">Registration</a></li>
                     <li><a href="#orgcom">Organizing Committee</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#faq">INFO & FAQ</a></li>
                     <!--li><a href="#elements">Elements</a></li-->
                 </ul>
             </nav>
@@ -213,7 +213,6 @@
                 America.</p>
                 <!--Add a dashed line below this-->
                 <hr>
-                <h3>Conference Location</h3>
                 <h3>Address:</h3>
                 <p>10753 Mountain Run Lake Rd, Culpeper, VA 22701</p>
                 
@@ -420,9 +419,91 @@
             <!--Registration -->
             <article id="registration">
                 <h2 class="major">Registration</h2>
-                <font size="4em">
-                    <p style="text-align:justify;">Sample tex.</p>
-                </font>
+
+                <p>Registration fee is $50 for faculty and $25 for students and includes snacks,
+                refreshments and lunches for the duration of conference. Please pay the registration
+                fee before filling out the registration form. The registration fee can be paid by
+                clicking the button below. Once you have made the payment, please note the
+                transaction ID and enter it in the registration form.</p>
+                <button style="background-color: #cc0000;" onclick="openPaymentLink()">Payment</button>
+                <hr>
+                <form action="https://formspree.io/f/mjvjjgow" method="POST">
+                    <label for="name">Registration ID: <span style="color: red;">*</span></label>
+                    <input type="text" id="rid" name="rid" required>
+
+                    <label for="name">Name: <span style="color: red;">*</span></label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="pronouns">Preferred Pronouns: <span style="color: red;">*</span></label>
+                    <input type="text" id="pronouns" name="pronouns" required>
+
+                    <label for="email">Email: <span style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="affiliation">Affiliation: <span style="color: red;">*</span></label>
+                    <input type="text" id="affiliation" name="affiliation" required>
+
+                    <label for="academic-position">Academic Position: <span style="color: red;">*</span></label>
+                    <select id="academic-position" name="academic-position"
+                        onchange="togglePositionInput(this.value)" required>
+                        <option value="">Select Academic Position</option>
+                        <option value="Professor">Professor</option>
+                        <option value="Research Scientist">Research Scientist</option>
+                        <option value="Postdoctoral Researcher">Postdoctoral Researcher</option>
+                        <option value="Graduate Student">Graduate Student</option>
+                        <option value="Undergraduate Student">Undergraduate Student</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <div id="position-input-container" style="display: none;">
+                        <label for="position-input">Specify Position:</label>
+                        <input type="text" id="position-input" name="position-input" tabindex="2">
+                    </div>
+
+                    <label for="attendee-type">Attendee Type: <span style="color: red;">*</span></label>
+                    <select id="attendee-type" name="attendee-type" required>
+                        <option value="">Select Attendee Type</option>
+                        <option value="Speaker">Speaker</option>
+                        <option value="Participant">Participant</option>
+                    </select>
+
+                    <label for="food-restrictions">Food Restrictions/Allergies: <span
+                            style="color: red;">*</span></label>
+                    <input type="text" id="food-restrictions" name="food-restrictions" required>
+
+                    <label for="additional-requests">Additional Requests:</label>
+                    <textarea id="additional-requests" name="additional-requests" rows="4"></textarea>
+
+                    <input type="submit" value="Register">
+                    <div class="field half">
+                        <input type="checkbox" id="copy" name="copy">
+                        <label for="copy">Email me a copy</label>
+                    </div>
+
+                </form>
+
+                <script>
+                    function openPaymentLink() {
+                        window.open("https://paypal.com", "_blank");
+                    }
+                </script>
+                <script>
+                    function togglePositionInput(value) {
+                        const positionInputContainer = document.getElementById('position-input-container');
+                        const positionInput = document.getElementById('position-input');
+
+                        if (value === 'Other') {
+                            positionInputContainer.style.display = 'block';
+                            positionInput.setAttribute('required', 'true');
+                            positionInput.setAttribute('tabindex', '2');
+                        } else {
+                            positionInputContainer.style.display = 'none';
+                            positionInput.removeAttribute('required');
+                            positionInput.removeAttribute('tabindex');
+                        }
+                    }
+                </script>
+
             </article>
 
             <!-- Organization Committee -->
@@ -487,7 +568,7 @@
                                 <input type="email" name="email" id="email" value="" placeholder="alpha@zeta.gamma" />
                             </div>
                             <div class="field half">
-                                <input type="checkbox" id="copy" name="copy">
+                                <input type="checkbox" id="copy" name="copy" unchecked>
                                 <label for="copy">Email me a copy</label>
                             </div>
                             <div class="field half">
@@ -505,7 +586,7 @@
                             <li><input type="reset" value="Reset" /></li>
                         </ul>
                     </form>
-                    
+
                     <div class="container-header">
                         <div class="grid_5" id="social_icons">
                             <a style="align-items: left;" itemprop="sameAs" href="https://github.com/Conferencex/"
@@ -524,107 +605,144 @@
 
             </article>
 
-            <!-- FAQ -->
+            <!-- FAQ and INFO -->
             <article id="faq">
-                    <h3>Frequently Asked Questions</h3>
-                    <dl class="faq-container">
-                        <dt class="faq-question">Q: When and where is Conference-X taking place?</dt>
-                        <dd class="faq-answer">A: Conference-X is scheduled to take place on [date] at [location].
-                        </dd>
-                    </dl>
-                    <dl class="faq-container">
-                        <dt class="faq-question">Q: Who can attend Conference-X?</dt>
-                        <dd class="faq-answer">A: Conference-X is open to researchers,
-                        professionals, students, and enthusiasts interested in X-ray imaging and
-                        magnetospheric studies.</dd>
-                    </dl>
-                    <dl class="faq-container">
-                        <dt class="faq-question">Q: How can I register for the conference?</dt>
-                        <dd class="faq-answer">A: Registration for Conference-X can be done
-                        through our website at [registration link].</dd>
 
-                    </dl>
-                    <dl class="faq-container">
-                        <dt class="faq-question">Q: Are there any submission opportunities for presentations or papers?</dt>
-                        <dd class="faq-answer">A: Yes, we welcome submissions for presentations and research papers related to X-ray imaging in
-                        magnetospheric studies. Please refer to the submission guidelines on our
-                        website.</dd>
-                    </dl>
-                    <dl class="faq-container">
-                        <dt class="faq-question">Q: Will there be networking opportunities at the conference?</dt>
-                        <dd class="faq-answer">A: Absolutely! Conference-X provides ample networking
-                        opportunities to connect with fellow attendees, experts, and researchers in
-                        the field.</dd>
-                    </dl>
-
-                    <dl class="faq-container">
-                        <dt class="faq-question">Q: Is there a fee to attend the conference?</dt>
-                        <dd class="faq-answer">A: Yes, there is a registration fee to attend Conference-X. Details about the registration fees
-                        can be found on our website.</dd>
-                    </dl>
-
-                    <dl class="faq-container">
-                        <dt class="faq-question">Q: Can I present my research findings at the conference?</dt>
-                        <dd class="faq-answer">A: Yes, Conference-X offers a platform for researchers to present their findings through paper
-                        presentations and poster sessions. Please check the submission guidelines for more information.
-                        </dd>
-                    </dl>
-
-                    <dl class="faq-container">
-                        <dt class="faq-question">Q: Will there be any workshops or tutorials at the conference?</dt>
-                        <dd class="faq-answer">A: Yes, Conference-X will feature workshops and tutorials conducted by experts in the field.
-                        Stay tuned for updates on our website.</dd>
-                    </dl>
-                    <dl class="faq-container">
-                        <dt class="faq-question">Q: How can I contact the organizers for further inquiries?</dt>
-                        <dd class="faq-answer">A: For any further inquiries or questions, you can reach out to our organizing team at [email
-                        address] or through our contact form on the website.</dd>
-                    </dl>
-
+                <p>The conference will be held at the following address:</p>
+                <!--Insert adress in green color here-->
                 
-                        <!-- Add more FAQ items using the same structure -->
-                    </dl>
-                
-                <script>
-                    // JavaScript code to toggle visibility of FAQ answers on click
-                    const faqQuestions = document.querySelectorAll('.faq-question');
+                <p style="font-weight: bold;">10753 Mountain Run Lake Rd, Culpeper, VA 22701</p>
 
-                    faqQuestions.forEach(question => {
-                        question.addEventListener('click', () => {
-                            question.classList.toggle('active');
-                            const answer = question.nextElementSibling;
-                            answer.classList.toggle('show');
-                        });
+                <p>There aren't any hotel at the venue of the conference, though there are several
+                hotels in the downtown area which is about 6-10 minutes drive from the conference venue.</p>
+
+                <h2 style="text-decoration: underline;">Lodging Options</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/culpeper/cupes/hoteldetail?cm_mmc=YextLocal-_-EX-_-US-_-CUPES"
+                            target="_blank">HOLIDAY INN EXPRESS & SUITES CULPEPER</a>
+                        <p style="font-size: 1em;">787 Madison Rd., Culpeper, VA 22701 United States</p>
+                    </li>
+
+                    <li>
+                        <a href="https://www.wyndhamhotels.com/microtel/culpeper-virginia/microtel-inn-suites-culpeper/overview?CID=LC:MT::GGL:RIO:National:29493&iata=00093796"
+                        target="_blank">Microtel Inn & Suites by Wyndham Culpeper</a>
+                        <p style="font-size: 1em;">885 Willis Lane, Culpeper, Virginia 22701</p>
+                    </li>
+
+                    <li>
+                        <a href="http://suitesat249.com/"
+                            target="_blank">SOPHISTICATED BOUTIQUE LODGING IN <br>
+                            Historic Downtown Culpeper</a>
+                        <p style="font-size: 1em;">249 East Davis St., Culpeper, VA 22701</p>
+                    </li>
+                    <li>
+                        <a href="http://www.culpepercenter.com/"
+                            target="_blank">CULPEPER CENTER & SUITES</a>
+                        <p style="font-size: 1em;">106 East Culpeper Street, Historic Downtown Culpeper, Virginia 22701</p>
+                    </li>
+                </ul>
+                <p>Be sure to book your lodging early to ensure availability!</p>
+                <hr>
+
+                <h3>Frequently Asked Questions</h3>
+                <dl class="faq-container">
+                    <dt class="faq-question">Q: When and where is Conference-X taking place?</dt>
+                    <dd class="faq-answer">A: Conference-X is scheduled to take place on 2<sup>nd</sup> and
+                    3<sup>rd</sup> of October, 2023 at 10753 Mountain Run Lake Rd, Culpeper, VA 22701.
+                    </dd>
+                </dl>
+                <dl class="faq-container">
+                    <dt class="faq-question">Q: Who can attend Conference-X?</dt>
+                    <dd class="faq-answer">A: Conference-X is open to researchers,
+                    professionals, students, and enthusiasts interested in X-ray imaging and
+                    magnetospheric studies.</dd>
+                </dl>
+                <dl class="faq-container">
+                    <dt class="faq-question">Q: How can I register for the conference?</dt>
+                    <dd class="faq-answer">A: Registration for Conference-X can be done
+                    through our website at [registration link].</dd>
+
+                </dl>
+                <dl class="faq-container">
+                    <dt class="faq-question">Q: Are there any submission opportunities for presentations or papers?</dt>
+                    <dd class="faq-answer">A: Yes, we welcome submissions for presentations and research papers related to X-ray imaging in
+                    magnetospheric studies. Please refer to the submission guidelines on our
+                    website.</dd>
+                </dl>
+                <dl class="faq-container">
+                    <dt class="faq-question">Q: Will there be networking opportunities at the conference?</dt>
+                    <dd class="faq-answer">A: Absolutely! Conference-X provides ample networking
+                    opportunities to connect with fellow attendees, experts, and researchers in
+                    the field.</dd>
+                </dl>
+
+                <dl class="faq-container">
+                    <dt class="faq-question">Q: Is there a fee to attend the conference?</dt>
+                    <dd class="faq-answer">A: Yes, there is a registration fee to attend Conference-X. Details about the registration fees
+                    can be found on our website.</dd>
+                </dl>
+
+                <dl class="faq-container">
+                    <dt class="faq-question">Q: Can I present my research findings at the conference?</dt>
+                    <dd class="faq-answer">A: Yes, Conference-X offers a platform for researchers to present their findings through paper
+                    presentations and poster sessions. Please check the submission guidelines for more information.
+                    </dd>
+                </dl>
+
+                <dl class="faq-container">
+                    <dt class="faq-question">Q: Will there be any workshops or tutorials at the conference?</dt>
+                    <dd class="faq-answer">A: Yes, Conference-X will feature workshops and tutorials conducted by experts in the field.
+                    Stay tuned for updates on our website.</dd>
+                </dl>
+                <dl class="faq-container">
+                    <dt class="faq-question">Q: How can I contact the organizers for further inquiries?</dt>
+                    <dd class="faq-answer">A: For any further inquiries or questions, you can reach
+                    out to our organizing team through our <a href="#orgcom">contact form</a> on the website.</dd>
+                </dl>
+                    <!-- Add more FAQ items using the same structure -->
+                </dl>
+            
+            <script>
+                // JavaScript code to toggle visibility of FAQ answers on click
+                const faqQuestions = document.querySelectorAll('.faq-question');
+
+                faqQuestions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        question.classList.toggle('active');
+                        const answer = question.nextElementSibling;
+                        answer.classList.toggle('show');
                     });
-                </script>
-                
-                <style>
-                    .faq-container {
-                        border: 0.1px solid white;
-                        padding: 2px;
-                        font-size: 16px;
-                    }
+                });
+            </script>
+            
+            <style>
+                .faq-container {
+                    border: 0.1px solid white;
+                    padding: 2px;
+                    font-size: 16px;
+                }
 
-                    .faq-question {
-                        cursor: pointer;
-                        font-weight: bold;
-                        margin-bottom: 5px;
-                        color: #ffffff;
-                    }
+                .faq-question {
+                    cursor: pointer;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    color: #ffffff;
+                }
 
-                    .faq-question.active {
-                        color: green;
-                    }
-                
-                    .faq-answer {
-                        display: none;
-                        margin-left: 20px;
-                    }
+                .faq-question.active {
+                    color: green;
+                }
+            
+                .faq-answer {
+                    display: none;
+                    margin-left: 20px;
+                }
 
-                    .faq-answer.show {
-                        display: block;
-                    }
-                </style>
+                .faq-answer.show {
+                    display: block;
+                }
+            </style>
             </article>
         </div>
 
