@@ -53,7 +53,7 @@
             display: flex;
             align-items: center;
         }
-    
+
         .member img {
             width: 20%;
             margin-right: 20px;
@@ -65,7 +65,7 @@
             border: 1px solid #484848;
             background-color: #838383;
         }
-    
+
         .tab button {
             background-color: inherit;
             float: left;
@@ -78,32 +78,32 @@
             color: #000;
             /* Default text color */
         }
-    
+
         .tab button:hover {
             background-color: #ff0000;
         }
-    
+
         .tab button.active {
             background-color: #000000;
             color: #000;
             /* Active button text color */
         }
-    
+
         .tab button:not(.active) {
             background-color: #838383;
         }
-    
+
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
         }
-    
+
         .schedule-table th,
         .schedule-table td {
             border: 1px solid #cc0000;
             padding: 8px;
         }
-    
+
         .schedule-table th:nth-child(3) {
             width: 50%;
         }
@@ -124,8 +124,9 @@
             <div class="content">
                 <div class="inner">
                     <h1> Conference - X </h1>
-                    <p>2-3, October, 2023</p>
-                    <p>10753 Mountain Run Lake Rd, Culpeper, VA 22701</p>
+                    <p style="font-size: 1.2em;">2<sup>nd</sup>-3<sup>rd</sup>, October, 2023</p>
+                    <p style="font-size: 2em;">@</p>
+                    <p style="font-size: 1.2em;">10753 Mountain Run Lake Rd, Culpeper, VA 22701</p>
                 </div>
             </div>
             <nav>
@@ -182,7 +183,6 @@
                         style="display: block; margin-left: auto; margin-right: auto; width: 300px; height: auto;">
                 </span>
 
-
                 <font size="4em">
                     <p style="text-align:justify;">
                     </p>
@@ -192,18 +192,18 @@
                     studies of the Earth's magnetosphere. Taking place this year, Conference-X brings together
                     experts, researchers, and enthusiasts to explore the fascinating world of X-ray-related studies.
                 </p>
-                
+
                 <p>With a specific focus on the intersection of X-ray imaging and the Earth's magnetosphere,
                     Conference-X provides a unique platform for sharing insights, advancements, and breakthroughs in
                     this specialized field. We are excited to welcome participants from the LEXI (Low-Energy X-ray
                     Imaging) and SMILE (Solar wind Magnetosphere Ionosphere Link Explorer) projects, as they
                     contribute their expertise and collaborate with fellow attendees.</p>
-                
+
                 <p>Conference-X offers a rich program featuring keynote presentations, research paper sessions,
                     interactive workshops, and networking opportunities. Engage with leading experts, exchange
                     knowledge, and discover the latest developments in X-ray imaging techniques, data analysis, and
                     their applications in understanding the Earth's magnetosphere.</p>
-                
+
                 <p>Join us at Conference-X to expand your horizons, forge new collaborations, and contribute to
                     the advancement of X-ray studies in the Earth's magnetosphere. Together, let's uncover the
                 mysteries of our planet's magnetic field and delve into the exciting realm of X-ray
@@ -227,13 +227,13 @@
             <article id="schedule">
                 <h2 class="major">Schedule</h2>
                     <div class="tab">
-                        <button class="tablinks" onclick="openDay(event, 'day1')" id="defaultOpen">Day 1 (2nd
+                        <button class="tablinks" onclick="openDay(event, 'day1')" id="defaultOpen">Day 1 (2<sup>nd</sup>
                             October)</button>
-                        <button class="tablinks" onclick="openDay(event, 'day2')">Day 2 (3rd October)</button>
+                        <button class="tablinks" onclick="openDay(event, 'day2')">Day 2 (3<sup>rd</sup> October)</button>
                     </div>
-                    
+
                     <div id="day1" class="tabcontent">
-                        <h2>Day 1 (2nd October)</h2>
+                        <h2>Day 1 (2<sup>nd</sup> October)</h2>
                         <table class="schedule-table">
                             <tr>
                                 <th>Time</th>
@@ -311,7 +311,7 @@
                     </div>
                     
                     <div id="day2" class="tabcontent">
-                        <h2>Day 2 (3rd October)</h2>
+                        <h2>Day 2 (3<sup>rd</sup> October)</h2>
                         <table class="schedule-table">
                             <tr>
                                 <th>Time</th>
@@ -388,11 +388,9 @@
                                 <td>Brian Walsh</td>
                                 <td>Concluding Remarks</td>
                             <!-- Add more talk slots as needed -->
-
                         </table>
                     </div>
 
-            
     <script>
         function openDay(evt, dayName) {
             var i, tabcontent, tablinks;
@@ -479,7 +477,6 @@
                         <input type="checkbox" id="copy" name="copy">
                         <label for="copy">Email me a copy</label>
                     </div>
-
                 </form>
 
                 <script>
@@ -702,7 +699,7 @@
                 </dl>
                     <!-- Add more FAQ items using the same structure -->
                 </dl>
-            
+
             <script>
                 // JavaScript code to toggle visibility of FAQ answers on click
                 const faqQuestions = document.querySelectorAll('.faq-question');
