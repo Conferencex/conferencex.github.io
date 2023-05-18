@@ -1,37 +1,63 @@
 /*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Dimension by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /* BG */
 
-	body.is-preload #bg:before {
-		background-color: transparent;
-	}
+    body.is-preload #bg:before {
+        background-color: transparent;
+    }
 
 /* Header */
 
-	body.is-preload #header {
-		-moz-filter: none;
-		-webkit-filter: none;
-		-ms-filter: none;
-		filter: none;
-	}
+    body.is-preload #header {
+        -moz-filter: none;
+        -webkit-filter: none;
+        -ms-filter: none;
+        filter: none;
+    }
 
-		body.is-preload #header > * {
-			opacity: 1;
-		}
+        body.is-preload #header > * {
+            opacity: 1;
+        }
 
-		body.is-preload #header .content .inner {
-			max-height: none;
-			padding: 3rem 2rem;
-			opacity: 1;
-		}
+        body.is-preload #header .content .inner {
+            max-height: none;
+            padding: 3rem 2rem;
+            opacity: 1;
+        }
 
 /* Main */
 
-	#main article {
-		opacity: 1;
-		margin: 4rem 0 0 0;
-	}
+    #main article {
+        opacity: 1;
+        margin: 4rem 0 0 0;
+    }
+
+
+
+    a:link {
+        color: cyan;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(8, 245, 107);
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: rgb(216, 185, 250);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+    }
