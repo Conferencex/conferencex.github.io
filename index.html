@@ -19,92 +19,11 @@
 
 <head>
     <style>
-        a:link {
-            color: cyan;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: rgb(8, 245, 107);
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: rgb(216, 185, 250);
-            background-color: transparent;
-            text-decoration: underline;
-        }
-
-        a:active {
-            color: yellow;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-
         body {
             font-family: "Times New Roman";
             font-size: 1em;
         }
 
-        .member {
-            display: flex;
-            align-items: center;
-        }
-
-        .member img {
-            width: 20%;
-            margin-right: 20px;
-        }
-
-        .tab {
-            overflow: hidden;
-            border: 1px solid #484848;
-            background-color: #838383;
-        }
-
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-            color: #000;
-            /* Default text color */
-        }
-
-        .tab button:hover {
-            background-color: #ff0000;
-        }
-
-        .tab button.active {
-            background-color: #000000;
-            color: #000;
-            /* Active button text color */
-        }
-
-        .tab button:not(.active) {
-            background-color: #838383;
-        }
-
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .schedule-table th,
-        .schedule-table td {
-            border: 1px solid #cc0000;
-            padding: 8px;
-        }
-
-        .schedule-table th:nth-child(3) {
-            width: 50%;
-        }
     </style>
 </head>
 
@@ -121,11 +40,12 @@
             <div class="content">
                 <div class="inner">
                     <h1>Conference - X</h1>
-                    <p style="font-size: 1.2em;">2<sup>nd</sup>-3<sup>rd</sup>, October, 2023</p>
-                    <p style="font-size: 2em;">@</p>
-                    <p style="font-size: 1.2em; white-space: pre-line;"><a
-                    href="https://www.google.com/maps?ll=38.466845,-78.051188&z=16&t=m&hl=en&gl=CA&mapclient=embed&q=10753+Mountain+Run+Lake+Rd+Culpeper,+VA+22701+USA" target="_blank">10753 Mountain Run Lake Rd
-                    Culpeper, VA 22701</a>
+                    <p style="font-size: 1.2em; white-space:
+                    pre-line;">2<sup>nd</sup>-4<sup>th</sup>, October, 2023
+                        @
+                    <a
+                    href="https://www.google.com/maps?ll=38.466845,-78.051188&z=16&t=m&hl=en&gl=CA&mapclient=embed&q=10753+Mountain+Run+Lake+Rd+Culpeper,+VA+22701+USA"
+                    target="_blank">Mountain Run Conference Center</a>
                     </p>
                 </div>
             </div>
@@ -134,42 +54,11 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#schedule">Schedule</a></li>
                     <li><a href="#registration">Registration</a></li>
-                    <li><a href="#orgcom">Organizing Committee</a></li>
-                    <li><a href="#faq">Travel INFO & FAQ</a></li>
+                    <!--li><a href="#orgcom">Organizing Committee</a></li-->
+                    <li><a href="#travel">Travel INFO & Contact</a></li>
                 </ul>
             </nav>
         </header>
-
-        <!---Script to be able to include the html file in the website-->
-        <script>
-            function includeHTML() {
-                var z, i, elmnt, file, xhttp;
-                /*loop through a collection of all HTML elements:*/
-                z = document.getElementsByTagName("*");
-                for (i = 0; i < z.length; i++) {
-                    elmnt = z[i];
-                    /*search for elements with a certain atrribute:*/
-                    file = elmnt.getAttribute("include-html");
-                    if (file) {
-                        /*make an HTTP request using the attribute value as the file name:*/
-                        xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function () {
-                            if (this.readyState == 4) {
-                                if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                                if (this.status == 404) { elmnt.innerHTML = "Page Null."; }
-                                /*remove the attribute, and call this function once more:*/
-                                elmnt.removeAttribute("include-html");
-                                includeHTML();
-                            }
-                        }
-                        xhttp.open("GET", file, true);
-                        xhttp.send();
-                        /*exit the function:*/
-                        return;
-                    }
-                }
-            };
-        </script>
 
         <!-- Main -->
         <div id="main">
@@ -187,37 +76,27 @@
                     </p>
                 </font>
 
-                <p>Welcome to the inaugural Conference-X, 
-                    a pioneering event in the field of X-ray imaging and
-                    studies of the Earth's magnetosphere. Taking place this year, Conference-X brings together
-                    experts, researchers, and enthusiasts to explore the fascinating world of X-ray-related studies.
+                <p style="font-size: 1em; text-align:justify;">
+                    Welcome to the inaugural Conference-X organized by [TBD] in collaboration with
+                    [TBD]. We aim to bring together researchers working on the SMILE and LEXI
+                    missions to discuss the latest results and future prospects of these missions.
                 </p>
 
-                <p>With a specific focus on the intersection of X-ray imaging and the Earth's magnetosphere,
-                    Conference-X provides a unique platform for sharing insights, advancements, and breakthroughs in
-                    this specialized field. We are excited to welcome participants from the LEXI (Low-Energy X-ray
-                    Imaging) and SMILE (Solar wind Magnetosphere Ionosphere Link Explorer) projects, as they
-                    contribute their expertise and collaborate with fellow attendees.</p>
-
-                <p>Conference-X offers a rich program featuring keynote presentations, research paper sessions,
-                    interactive workshops, and networking opportunities. Engage with leading experts, exchange
-                    knowledge, and discover the latest developments in X-ray imaging techniques, data analysis, and
-                    their applications in understanding the Earth's magnetosphere.</p>
-
-                <p>Join us at Conference-X to expand your horizons, forge new collaborations, and contribute to
-                    the advancement of X-ray studies in the Earth's magnetosphere. Together, let's uncover the
-                mysteries of our planet's magnetic field and delve into the exciting realm of X-ray
-                imaging.</p>
-                    
-                <p>Conference-X is organized by the Boston University and the Catholic University of
-                America.</p>
-                <!--Add a dashed line below this-->
+                <h3>Important Dates:</h3>
+                    <p style="font-size: 1em; text-align:justify;">
+                        &nbsp;&nbsp;&nbsp;&nbsp; <b>Registration Opens:</b> 1<sup>st</sup> July, 2023<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Abstract Submission Deadline:</b> 1<sup>st</sup> August, 2023<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Registration Deadline:</b> 1<sup>st</sup> September, 2023<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<b>Conference Dates:</b> 2<sup>nd</sup> - 4<sup>th</sup> October, 2023<br>
                 <hr>
-                <h3>Address:</h3>
-                <p>10753 Mountain Run Lake Rd, Culpeper, VA 22701</p>
-                
-                <h4>Directions:</h4>
-                    <p>Use the map below to get to the conference location:</p>
+                <h3 style="text-decoration: underline;">Address:</h3>
+                <p style="font-size: 1.2em;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.google.com/maps?ll=38.466845,-78.051188&z=16&t=m&hl=en&gl=CA&mapclient=embed&q=10753+Mountain+Run+Lake+Rd+Culpeper,+VA+22701+USA"
+                    target="_blank">10753 Mountain Run Lake Rd, Culpeper, VA 22701</a>
+                </p>
+
+                <h4 style="text-decoration: underline;">Directions:</h4>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp; Use the map below to get to the conference location:</p>
                     <div style="text-align: center;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10999.386885089114!2d-78.05408685619066!3d38.468608509032904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b4247053211823%3A0x2e521e53ad37a332!2s10753%20Mountain%20Run%20Lake%20Rd%2C%20Culpeper%2C%20VA%2022701!5e0!3m2!1sen!2sus!4v1684243480123!5m2!1sen!2sus"
@@ -225,9 +104,10 @@
                             allowfullscreen="" loading="lazy">
                         </iframe>
                     </div>
+                <hr>
                 <h2 class="major">Organizing Committee</h2>
-                <div class="row">
-                    <div class="column">
+                <div class="column">
+                    <div class="row">
                         <div class="member">
                             <img src="./images/photo_bw.jpg" alt="Brian">
                             <div>
@@ -242,7 +122,7 @@
                         </div>
                     </div>
                     <p></p>
-                    <div class="column">
+                    <div class="row">
                         <div class="member">
                             <img src="./images/photo_ns.jpg" alt="Nithin">
                             <div>
@@ -256,13 +136,12 @@
                         </div>
                     </div>
                     <p></p>
-                    <div class="column">
+                    <div class="row">
                         <div class="member">
                             <img src="./images/photo_rq.jpg" alt="Ramiz">
                             <div>
                                 <font size="5em">
                                     <a href="https://qudsiramiz.space/" target="_blank">Ramiz Qudsi</a>
-                
                                 </font>
                                 <font size="3em">
                                     <p>Boston University</p>
@@ -270,245 +149,228 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <h3 class="major">Contact Us</h3>
-                    <form method="POST" action="https://formspree.io/f/mjvjjgow">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" value="" placeholder="Alpha Zeta" />
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" value=""
-                                    placeholder="alpha@zeta.gamma" />
-                            </div>
-                            <div class="field half">
-                                <input type="checkbox" id="copy" name="copy" unchecked>
-                                <label for="copy">Email me a copy</label>
-                            </div>
-                            <div class="field half">
-                                <input type="checkbox" id="human" name="human" unchecked>
-                                <label for="human">Not a robot</label>
-                            </div>
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" placeholder="Enter your message"
-                                    rows="6"></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary" /></li>
-                            <li><input type="reset" value="Reset" /></li>
-                        </ul>
-                    </form>
-                
-                    <div class="container-header">
-                        <div class="grid_5" id="social_icons">
-                            <a style="align-items: left;" itemprop="sameAs" href="https://github.com/Conferencex/"
-                                target="_blank" rel="noopener"><i class="fab fa-github fa-2x"></i></a>
-                        </div>
-                
-                        <nav class="topmenu omega">
-                            <ul>
-                                <li>
-                                    <address>
-                                        <a href="mailto:qudsira@bu.edu">Contact Us</a>
-                                    </address>
-                                </li>
-                            </ul>
-                        </nav>
+                </div>
+            <p style="text-align: justify;">If you have any questions, please feel free to contact
+            us using the form on the <a href="#travel">Contact Us</a> page</p>
             </article>
 
             <!-- Schedule -->
             <article id="schedule">
-                <h2 class="major">Schedule</h2>
-                    <div class="tab">
-                        <button class="tablinks" onclick="openDay(event, 'day1')" id="defaultOpen">Day 1 (2<sup>nd</sup>
-                            October)</button>
-                        <button class="tablinks" onclick="openDay(event, 'day2')">Day 2 (3<sup>rd</sup> October)</button>
-                    </div>
+                <h2 class="major">Tentative Schedule</h2>
+                <font size="4em">
+                    <p style="text-align:justify;">
+                        The conference will be held over two and half days, from the morning of
+                        2<sup>nd</sup> October, 2023  to 4<sup>th</sup> October, 2023 afternoon.
+                        There will be an icebreaker event on the evening of 1<sup>st</sup> October,
+                        2023 at [TBD] location from 5pm to 8pm. Please note that this schedule is
+                        tentative and subject to change over next few months. We will update this
+                        page as we finalize the schedule.
+                    </p>
+                </font>
+                <p style="text-align:justify;">
+                    <b>Day 0 (1<sup>st</sup> October, Sunday)<br> &nbsp;&nbsp;&nbsp;&nbsp; 5pm - 8pm</b>: Icebreaker event at [TBD] location.
+                </p>
+                <p style="text-align:justify;">
+                    <b>Day 1 (2<sup>nd</sup> October, Monday)<br> &nbsp;&nbsp;&nbsp;&nbsp; 8:30am -
+                    5pm</b>: Science Program (Talks, and Discussions). Exact schedule will be posted
+                    soon.
+                </p>
+                <p style="text-align:justify;">
+                    <b>Day 2 (3<sup>rd</sup> October, Tuesday)<br> &nbsp;&nbsp;&nbsp;&nbsp; 8:30am -
+                    3pm</b>: Science Program (Talks, and Discussions). Exact schedule will be posted
+                    soon.
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp; <b>3pm - 5pm</b>: Excursion/Extra Curricular
+                    Activities.
+                </p>
+                <p style="text-align:justify;">
+                    <b>Day 3 (4<sup>th</sup> October, Wednesday)<br> &nbsp;&nbsp;&nbsp;&nbsp; 8:30am
+                    :3pm</b>: Science Program (Talks, and Discussions). Exact schedule will be
+                    posted soon.
+                </p>
 
-                    <div id="day1" class="tabcontent">
-                        <h2>Day 1 (2<sup>nd</sup> October)</h2>
-                        <table class="schedule-table">
-                            <tr>
-                                <th>Time</th>
-                                <th>Speaker</th>
-                                <th>Title of the Talk</th>
-                            </tr>
-                            <tr>
-                                <td>9:00 AM - 9:30 AM</td>
-                                <td>Brian Walsh</td>
-                                <td>Welcome Address and General Information</td>
-                            </tr>
-                            <tr>
-                                <td>9:30 AM - 10:00 AM</td>
-                                <td>Speaker 2</td>
-                                <td>Title of Talk 2</td>
-                            </tr>
-                            <tr>
-                                <td>10:00 AM - 10:30 AM</td>
-                                <td>Speaker 3</td>
-                                <td>Title of Talk 3</td>
-                            </tr>
-                            <tr>
-                                <td>10:30 AM - 11:00 AM</td>
-                                <td>-</td>
-                                <td>Coffee Break</td>
-                            </tr>
-                            <tr>
-                                <td>11:00 AM - 11:30 AM</td>
-                                <td>Speaker 4</td>
-                                <td>Title of Talk 4</td>
-                            </tr>
-                            <tr>
-                                <td>11:30 AM - 12:00 PM</td>
-                                <td>Speaker 5</td>
-                                <td>Title of Talk 5</td>
-                            </tr>
-                            <!-- Add more talk slots as needed -->
-                            <tr>
-                                <td>12:30 PM - 2:00 PM</td>
-                                <td>-</td>
-                                <td>Lunch Break</td>
-                            </tr>
-                            <tr>
-                                <td>2:00 PM - 2:30 PM</td>
-                                <td>Speaker 6</td>
-                                <td>Title of Talk 6</td>
-                            </tr>
-                            <tr>
-                                <td>2:30 PM - 3:00 PM</td>
-                                <td>Speaker 7</td>
-                                <td>Title of Talk 7</td>
-                            </tr>
-                            <tr>
-                                <td>3:00 PM - 3:30 PM</td>
-                                <td>Speaker 8</td>
-                                <td>Title of Talk 8</td>
-                            </tr>
-                            <tr>
-                                <td>3:30 PM - 4:00 PM</td>
-                                <td>-</td>
-                                <td>Coffee Break</td>
-                            </tr>
-                            <tr>
-                                <td>4:00 PM - 4:30 PM</td>
-                                <td>Speaker 9</td>
-                                <td>Title of Talk 9</td>
-                            </tr>
-                            <tr>
-                                <td>4:30 PM - 5:00 PM</td>
-                                <td>Speaker 10</td>
-                                <td>Title of Talk 10</td>
-                            </tr>
-                            <!-- Add more talk slots as needed -->
-                        </table>
-                    </div>
-                    
-                    <div id="day2" class="tabcontent">
-                        <h2>Day 2 (3<sup>rd</sup> October)</h2>
-                        <table class="schedule-table">
-                            <tr>
-                                <th>Time</th>
-                                <th>Speaker</th>
-                                <th>Title of the Talk</th>
-                            </tr>
-                            <tr>
-                                <td>9:00 AM - 9:30 AM</td>
-                                <td>Brian Walsh</td>
-                                <td>Summary of Day 1</td>
-                            </tr>
-                            <tr>
-                                <td>9:30 AM - 10:00 AM</td>
-                                <td>Speaker 11</td>
-                                <td>Title of Talk 11</td>
-                            </tr>
-                            <tr>
-                                <td>10:00 AM - 10:30 AM</td>
-                                <td>Speaker 12</td>
-                                <td>Title of Talk 12</td>
-                            </tr>
-                            <tr>
-                                <td>10:30 AM - 11:00 AM</td>
-                                <td>-</td>
-                                <td>Coffee Break</td>
-                            </tr>
-                            <tr>
-                                <td>11:00 AM - 11:30 AM</td>
-                                <td>Speaker 13</td>
-                                <td>Title of Talk 13</td>
-                            </tr>
-                            <tr>
-                                <td>11:30 AM - 12:00 PM</td>
-                                <td>Speaker 14</td>
-                                <td>Title of Talk 14</td>
-                            </tr>
-                            <tr>
-                                <td>12:30 PM - 2:00 PM</td>
-                                <td>-</td>
-                                <td>Lunch Break</td>
-                            </tr>
-                            <tr>
-                                <td>2:00 PM - 2:30 PM</td>
-                                <td>Speaker 15</td>
-                                <td>Title of Talk 15</td>
-                            </tr>
-                            <tr>
-                                <td>2:30 PM - 3:00 PM</td>
-                                <td>Speaker 16</td>
-                                <td>Title of Talk 16</td>
-                            </tr>
-                            <tr>
-                                <td>3:00 PM - 3:30 PM</td>
-                                <td>Speaker 17</td>
-                                <td>Title of Talk 17</td>
-                            </tr>
-                            <tr>
-                                <td>3:30 PM - 4:00 PM</td>
-                                <td>-</td>
-                                <td>Coffee Break</td>
-                            </tr>
-                            <tr>
-                                <td>4:00 PM - 4:30 PM</td>
-                                <td>Speaker 18</td>
-                                <td>Title of Talk 18</td>
-                            </tr>
-                            <tr>
-                                <td>4:30 PM - 5:00 PM</td>
-                                <td>Speaker 19</td>
-                                <td>Title of Talk 19</td>
-                            </tr>
-                            <tr>
-                                <td>5:00 PM - 5:30 PM</td>
-                                <td>Brian Walsh</td>
-                                <td>Concluding Remarks</td>
-                            <!-- Add more talk slots as needed -->
-                        </table>
-                    </div>
+                <!--div class="tab">
+                    <button class="tablinks" onclick="openDay(event, 'day1')" id="defaultOpen">Day 1 (2<sup>nd</sup>
+                        October)</button>
+                    <button class="tablinks" onclick="openDay(event, 'day2')">Day 2 (4<sup>th</sup> October)</button>
+                </div>
 
-    <script>
-        function openDay(evt, dayName) {
-            var i, tabcontent, tablinks;
+                <div id="day1" class="tabcontent">
+                    <h2>Day 1 (2<sup>nd</sup> October)</h2>
+                    <table class="schedule-table">
+                        <tr>
+                            <th>Time</th>
+                            <th>Speaker</th>
+                            <th>Title of the Talk</th>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM - 9:30 AM</td>
+                            <td>Brian Walsh</td>
+                            <td>Welcome Address and General Information</td>
+                        </tr>
+                        <tr>
+                            <td>9:30 AM - 10:00 AM</td>
+                            <td>Speaker 2</td>
+                            <td>Title of Talk 2</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM - 10:30 AM</td>
+                            <td>Speaker 3</td>
+                            <td>Title of Talk 3</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 AM - 11:00 AM</td>
+                            <td>-</td>
+                            <td>Coffee Break</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM - 11:30 AM</td>
+                            <td>Speaker 4</td>
+                            <td>Title of Talk 4</td>
+                        </tr>
+                        <tr>
+                            <td>11:30 AM - 12:00 PM</td>
+                            <td>Speaker 5</td>
+                            <td>Title of Talk 5</td>
+                        </tr>
+                        <tr>
+                            <td>12:30 PM - 2:00 PM</td>
+                            <td>-</td>
+                            <td>Lunch Break</td>
+                        </tr>
+                        <tr>
+                            <td>2:00 PM - 2:30 PM</td>
+                            <td>Speaker 6</td>
+                            <td>Title of Talk 6</td>
+                        </tr>
+                        <tr>
+                            <td>2:30 PM - 3:00 PM</td>
+                            <td>Speaker 7</td>
+                            <td>Title of Talk 7</td>
+                        </tr>
+                        <tr>
+                            <td>3:00 PM - 3:30 PM</td>
+                            <td>Speaker 8</td>
+                            <td>Title of Talk 8</td>
+                        </tr>
+                        <tr>
+                            <td>3:30 PM - 4:00 PM</td>
+                            <td>-</td>
+                            <td>Coffee Break</td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM - 4:30 PM</td>
+                            <td>Speaker 9</td>
+                            <td>Title of Talk 9</td>
+                        </tr>
+                        <tr>
+                            <td>4:30 PM - 5:00 PM</td>
+                            <td>Speaker 10</td>
+                            <td>Title of Talk 10</td>
+                        </tr>
+                    </table>
+                </div>
 
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
+                <div id="day2" class="tabcontent">
+                    <h2>Day 2 (4<sup>th</sup> October)</h2>
+                    <table class="schedule-table">
+                        <tr>
+                            <th>Time</th>
+                            <th>Speaker</th>
+                            <th>Title of the Talk</th>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM - 9:30 AM</td>
+                            <td>Brian Walsh</td>
+                            <td>Summary of Day 1</td>
+                        </tr>
+                        <tr>
+                            <td>9:30 AM - 10:00 AM</td>
+                            <td>Speaker 11</td>
+                            <td>Title of Talk 11</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM - 10:30 AM</td>
+                            <td>Speaker 12</td>
+                            <td>Title of Talk 12</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 AM - 11:00 AM</td>
+                            <td>-</td>
+                            <td>Coffee Break</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM - 11:30 AM</td>
+                            <td>Speaker 13</td>
+                            <td>Title of Talk 13</td>
+                        </tr>
+                        <tr>
+                            <td>11:30 AM - 12:00 PM</td>
+                            <td>Speaker 14</td>
+                            <td>Title of Talk 14</td>
+                        </tr>
+                        <tr>
+                            <td>12:30 PM - 2:00 PM</td>
+                            <td>-</td>
+                            <td>Lunch Break</td>
+                        </tr>
+                        <tr>
+                            <td>2:00 PM - 2:30 PM</td>
+                            <td>Speaker 15</td>
+                            <td>Title of Talk 15</td>
+                        </tr>
+                        <tr>
+                            <td>2:30 PM - 3:00 PM</td>
+                            <td>Speaker 16</td>
+                            <td>Title of Talk 16</td>
+                        </tr>
+                        <tr>
+                            <td>3:00 PM - 3:30 PM</td>
+                            <td>Speaker 17</td>
+                            <td>Title of Talk 17</td>
+                        </tr>
+                        <tr>
+                            <td>3:30 PM - 4:00 PM</td>
+                            <td>-</td>
+                            <td>Coffee Break</td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM - 4:30 PM</td>
+                            <td>Speaker 18</td>
+                            <td>Title of Talk 18</td>
+                        </tr>
+                        <tr>
+                            <td>4:30 PM - 5:00 PM</td>
+                            <td>Speaker 19</td>
+                            <td>Title of Talk 19</td>
+                        </tr>
+                        <tr>
+                            <td>5:00 PM - 5:30 PM</td>
+                            <td>Brian Walsh</td>
+                            <td>Concluding Remarks</td>
+                    </table>
+                </div-->
 
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
+                <script>
+                    function openDay(evt, dayName) {
+                        var i, tabcontent, tablinks;
 
-            document.getElementById(dayName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
+                        tabcontent = document.getElementsByClassName("tabcontent");
+                        for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].style.display = "none";
+                        }
 
-        document.getElementById("defaultOpen").click();
-    </script>
-        </font>
+                        tablinks = document.getElementsByClassName("tablinks");
+                        for (i = 0; i < tablinks.length; i++) {
+                            tablinks[i].className = tablinks[i].className.replace(" active", "");
+                        }
+
+                        document.getElementById(dayName).style.display = "block";
+                        evt.currentTarget.className += " active";
+                    }
+
+                    document.getElementById("defaultOpen").click();
+                </script>
+
             </article>
 
             <!--Registration -->
@@ -523,22 +385,23 @@
                 <button style="background-color: #cc0000;" onclick="openPaymentLink()">Payment</button>
                 <hr>
                 <form action="https://formspree.io/f/mjvjjgow" method="POST">
-                    <label for="name">Registration ID: <span style="color: red;">*</span></label>
-                    <input type="text" id="rid" name="rid" required>
 
-                    <label for="name">Name: <span style="color: red;">*</span></label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="rid" name="rid" placeholder="Enter the Registration ID you received after making the payment" required>
+                    <label for="name">Registration ID<span style="color: red;">*</span></label>
 
-                    <label for="pronouns">Preferred Pronouns: <span style="color: red;">*</span></label>
-                    <input type="text" id="pronouns" name="pronouns" required>
+                    <input type="text" id="name" name="name" placeholder="" required>
+                    <label for="name">Name<span style="color: red;">*</span></label>
 
-                    <label for="email">Email: <span style="color: red;">*</span></label>
+                    <input type="text" id="pronouns" name="pronouns">
+                    <label for="pronouns">Preferred Pronouns</label>
+
                     <input type="email" id="email" name="email" required>
+                    <label for="email">Email<span style="color: red;">*</span></label>
 
-                    <label for="affiliation">Affiliation: <span style="color: red;">*</span></label>
+
                     <input type="text" id="affiliation" name="affiliation" required>
+                    <label for="affiliation">Affiliation<span style="color: red;">*</span></label>
 
-                    <label for="academic-position">Academic Position: <span style="color: red;">*</span></label>
                     <select id="academic-position" name="academic-position"
                         onchange="togglePositionInput(this.value)" required>
                         <option value="">Select Academic Position</option>
@@ -549,31 +412,31 @@
                         <option value="Undergraduate Student">Undergraduate Student</option>
                         <option value="Other">Other</option>
                     </select>
-
                     <div id="position-input-container" style="display: none;">
-                        <label for="position-input">Specify Position:</label>
+                        <label for="position-input">Specify Position</label>
                         <input type="text" id="position-input" name="position-input" tabindex="2">
                     </div>
 
-                    <label for="attendee-type">Attendee Type: <span style="color: red;">*</span></label>
+                    <label for="academic-position">Academic Position<span style="color:
+                    red;">*</span></label>
+
                     <select id="attendee-type" name="attendee-type" required>
                         <option value="">Select Attendee Type</option>
                         <option value="Speaker">Speaker</option>
                         <option value="Participant">Participant</option>
                     </select>
+                    <label for="attendee-type">Attendee Type<span style="color: red;">*</span></label>
 
-                    <label for="food-restrictions">Food Restrictions/Allergies: <span
-                            style="color: red;">*</span></label>
-                    <input type="text" id="food-restrictions" name="food-restrictions" required>
+                    <input type="text" id="food-restrictions" name="food-restrictions"
+                    placeholder="Vegan/Kosher/Vegetarian/Glutten Free/NA" required>
+                    <label for="food-restrictions">Food Restrictions/Allergies<span
+                    style="color:red;">*</span></label>
 
+                    <br>
                     <label for="additional-requests">Additional Requests:</label>
                     <textarea id="additional-requests" name="additional-requests" rows="4"></textarea>
 
                     <input type="submit" value="Register">
-                    <div class="field half">
-                        <input type="checkbox" id="copy" name="copy">
-                        <label for="copy">Email me a copy</label>
-                    </div>
                 </form>
 
                 <script>
@@ -600,105 +463,8 @@
 
             </article>
 
-            <!-- Organization Committee -->
-            <!--article id="orgcom">
-                <h2 class="major">Organizing Committee</h2>
-                <div class="row">
-                    <div class="column">
-                        <div class="member">
-                            <img src="./images/photo_bw.jpg" alt="Brian">
-                            <div>
-                                <font size="5em">
-                                    <a href="https://sites.bu.edu/bwalsh" target="_blank">
-                                        Brian Walsh</a>
-                                </font>
-                                <font size="3em">
-                                    <p>Boston university</p>
-                                </font>
-                            </div>
-                        </div>
-                    </div>
-                    <p></p>
-                    <div class="column">
-                        <div class="member">
-                            <img src="./images/photo_ns.jpg" alt="Nithin">
-                            <div>
-                                <font size="5em">
-                                    <a href="https://nithinsivadas.com/" target="_blank">Nithin Sivadas</a>
-                                </font>
-                                <font size="3em">
-                                    <p>Goddard Space Flight Center</p>
-                                </font>
-                            </div>
-                        </div>
-                    </div>
-                    <p></p>
-                    <div class="column">
-                        <div class="member">
-                            <img src="./images/photo_rq.jpg" alt="Ramiz">
-                            <div>
-                                <font size="5em">
-                                    <a href="https://qudsiramiz.space/" target="_blank">Ramiz Qudsi</a>
-
-                                </font>
-                                <font size="3em">
-                                    <p>Boston University</p>
-                                </font>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <h3 class="major">Contact Us</h3>
-                    <form method="POST" action="https://formspree.io/f/mjvjjgow">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" value="" placeholder="Alpha Zeta" />
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" value="" placeholder="alpha@zeta.gamma" />
-                            </div>
-                            <div class="field half">
-                                <input type="checkbox" id="copy" name="copy" unchecked>
-                                <label for="copy">Email me a copy</label>
-                            </div>
-                            <div class="field half">
-                                <input type="checkbox" id="human" name="human" unchecked>
-                                <label for="human">Not a robot</label>
-                            </div>
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" placeholder="Enter your message"
-                                    rows="6"></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary" /></li>
-                            <li><input type="reset" value="Reset" /></li>
-                        </ul>
-                    </form>
-
-                    <div class="container-header">
-                        <div class="grid_5" id="social_icons">
-                            <a style="align-items: left;" itemprop="sameAs" href="https://github.com/Conferencex/"
-                                target="_blank" rel="noopener"><i class="fab fa-github fa-2x"></i></a>
-                        </div>
-
-                        <nav class="topmenu omega">
-                            <ul>
-                                <li>
-                                    <address>
-                                        <a href="mailto:qudsira@bu.edu">Contact Us</a>
-                                    </address>
-                                </li>
-                            </ul>
-                        </nav>
-
-            </article-->
-
-            <!-- Travel FAQ and INFO -->
-            <article id="faq">
+            <!-- Travel INFO and Contact Us -->
+            <article id="travel">
 
                 <h2 style="text-decoration: underline;">Travel information</h2>
                 <p style="font-size: 1.2em; white-space: pre-line;">The conference will be held at the following address:
@@ -708,55 +474,23 @@
                 <p style="font-size: 1em;">The place is located about an hour drive from
                 Washington Dulles International Airport (IAD) and about 1.5 hours drive from Ronald
                 Reagan Washington National Airport (DCA). See the map below for more information.<br>
-                <!--From Washington DC downtown area, you can use either <b><i>Northeast
-                Regional</i></b> or <b><i>Crescent</i></b> train line (from <b><i>Union
-                Station</i></b>) to get to the Culpeper downtown. From there on, you can use
-                <b><i>Culpeper Trolley</i></b> for local travel to reach your local accommodation.
-                See the map below for more information.-->
             </p>
-                <div style="text-align: center;">
+                <!--div style="text-align: center;">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d398623.49486266053!2d-77.82944844462817!3d38.68919195721092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x89b7c6de5af6e45b%3A0xc2524522d4885d2a!2sWashington%2C%20DC!3m2!1d38.9071923!2d-77.0368707!4m5!1s0x89b426c1cc44b9d3%3A0x2430bbe75d24ab19!2sCulpeper%20Station%2C%20111%20South%20Commerce%20Street%2C%20Culpeper%2C%20VA%2022701!3m2!1d38.4721662!2d-77.9934703!5e0!3m2!1sen!2sus!4v1684247948545!5m2!1sen!2sus"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+                </div-->
 
                 <hr>
-                <h2 style="text-decoration: underline;">Lodging Options</h2>
+                <h2 style="text-decoration: underline;">Lodging Options</a></h2>
                 <p style="font-size: 1em;">There aren't any hotel at the venue of the conference,
                 though there are several hotels in the downtown area which is about 6-10 minutes
-                drive from the conference venue. Taxi services like <b><i>Lyft</i></b> and
-                <b><i>Uber</i></b> are also availble for local transit.</p>
-                <!--ul>
-                    <li>
-                        <a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/culpeper/cupes/hoteldetail?cm_mmc=YextLocal-_-EX-_-US-_-CUPES"
-                            target="_blank">HOLIDAY INN EXPRESS & SUITES CULPEPER</a>
-                        <p style="font-size: 1em;">787 Madison Rd., Culpeper, VA 22701</p>
-                    </li>
+                drive from the conference venue. We recommend <a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/culpeper/cupes/hoteldetail?cm_mmc=YextLocal-_-EX-_-US-_-CUPES"
+                target="_blank">Holiday Inn Express & Suites Culpeper</a> which is about 2.6 miles
+                from the conference venue. Other options are listed below.
+                </p>
 
-                    <li>
-                        <a href="https://www.wyndhamhotels.com/microtel/culpeper-virginia/microtel-inn-suites-culpeper/overview?CID=LC:MT::GGL:RIO:National:29493&iata=00093796"
-                        target="_blank">Microtel Inn & Suites by Wyndham Culpeper</a>
-                        <p style="font-size: 1em;">885 Willis Lane, Culpeper, Virginia 22701</p>
-                    </li>
-
-                    <li>
-                        <a href="http://suitesat249.com/"
-                            target="_blank">SOPHISTICATED BOUTIQUE LODGING IN <br>
-                            Historic Downtown Culpeper</a>
-                        <p style="font-size: 1em;">249 East Davis St., Culpeper, VA 22701</p>
-                    </li>
-                    <li>
-                        <a href="http://www.culpepercenter.com/"
-                            target="_blank">CULPEPER CENTER & SUITES</a>
-                        <p style="font-size: 1em;">106 East Culpeper Street, Historic Downtown Culpeper, Virginia 22701</p>
-                    </li>
-                    <li>
-                        <a href="https://www.hilton.com/en/hotels/mnzcvhx-hampton-suites-culpeper/?SEO_id=GMB-AMER-HX-MNZCVHX&y_source=1_MTI0Mzc1MTUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
-                            target="_blank">Hampton Inn & Suites Culpeper</a>
-                        <p style="font-size: 1em;">18411 Gate Road, Culpeper, Virginia, 22701</p>
-                    </li>
-                </ul-->
                 <table>
                     <thead>
                         <caption style="border-top: 1px solid"></caption>
@@ -815,104 +549,53 @@
                 <p>Be sure to book your lodging early to ensure availability!</p>
                 <hr>
 
-                <h3>Frequently Asked Questions</h3>
-                <p>Please contact us if you have any questions.</p>
-                <!--
-                <dl class="faq-container">
-                    <dt class="faq-question">Q: When and where is Conference-X taking place?</dt>
-                    <dd class="faq-answer">A: Conference-X is scheduled to take place on 2<sup>nd</sup> and
-                    3<sup>rd</sup> of October, 2023 at 10753 Mountain Run Lake Rd, Culpeper, VA 22701.
-                    </dd>
-                </dl>
-                <dl class="faq-container">
-                    <dt class="faq-question">Q: Who can attend Conference-X?</dt>
-                    <dd class="faq-answer">A: Conference-X is open to researchers,
-                    professionals, students, and enthusiasts interested in X-ray imaging and
-                    magnetospheric studies.</dd>
-                </dl>
-                <dl class="faq-container">
-                    <dt class="faq-question">Q: How can I register for the conference?</dt>
-                    <dd class="faq-answer">A: Registration for Conference-X can be done
-                    through our website at [registration link].</dd>
+                <h3>Have Questions</h3>
+                <p>Please feel free to contact us using the form below.</p>
 
-                </dl>
-                <dl class="faq-container">
-                    <dt class="faq-question">Q: Are there any submission opportunities for presentations or papers?</dt>
-                    <dd class="faq-answer">A: Yes, we welcome submissions for presentations and research papers related to X-ray imaging in
-                    magnetospheric studies. Please refer to the submission guidelines on our
-                    website.</dd>
-                </dl>
-                <dl class="faq-container">
-                    <dt class="faq-question">Q: Will there be networking opportunities at the conference?</dt>
-                    <dd class="faq-answer">A: Absolutely! Conference-X provides ample networking
-                    opportunities to connect with fellow attendees, experts, and researchers in
-                    the field.</dd>
-                </dl>
+                <hr>
+                <h3 class="major" id="contact-us">Contact Us</h3>
+                <form method="POST" action="https://formspree.io/f/mjvjjgow">
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" value="" placeholder="Alpha Zeta" />
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" value="" placeholder="alpha@zeta.gamma" />
+                        </div>
+                        <div class="field half">
+                            <input type="checkbox" id="human" name="human" unchecked>
+                            <label for="human">Not a robot</label>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="Enter your message"
+                                rows="6"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </form>
 
-                <dl class="faq-container">
-                    <dt class="faq-question">Q: Is there a fee to attend the conference?</dt>
-                    <dd class="faq-answer">A: Yes, there is a registration fee to attend Conference-X. Details about the registration fees
-                    can be found on our website.</dd>
-                </dl>
-
-                <dl class="faq-container">
-                    <dt class="faq-question">Q: Can I present my research findings at the conference?</dt>
-                    <dd class="faq-answer">A: Yes, Conference-X offers a platform for researchers to present their findings through paper
-                    presentations and poster sessions. Please check the submission guidelines for more information.
-                    </dd>
-                </dl>
-
-                <dl class="faq-container">
-                    <dt class="faq-question">Q: Will there be any workshops or tutorials at the conference?</dt>
-                    <dd class="faq-answer">A: Yes, Conference-X will feature workshops and tutorials conducted by experts in the field.
-                    Stay tuned for updates on our website.</dd>
-                </dl>
-                <dl class="faq-container">
-                    <dt class="faq-question">Q: How can I contact the organizers for further inquiries?</dt>
-                    <dd class="faq-answer">A: For any further inquiries or questions, you can reach
-                    out to our organizing team through our <a href="#orgcom">contact form</a> on the website.</dd>
-                -->
-
-            <script>
-                // JavaScript code to toggle visibility of FAQ answers on click
-                const faqQuestions = document.querySelectorAll('.faq-question');
-
-                faqQuestions.forEach(question => {
-                    question.addEventListener('click', () => {
-                        question.classList.toggle('active');
-                        const answer = question.nextElementSibling;
-                        answer.classList.toggle('show');
-                    });
-                });
-            </script>
-
-            <style>
-                .faq-container {
-                    border: 0.1px solid white;
-                    padding: 2px;
-                    font-size: 16px;
-                }
-
-                .faq-question {
-                    cursor: pointer;
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                    color: #ffffff;
-                }
-
-                .faq-question.active {
-                    color: green;
-                }
-
-                .faq-answer {
-                    display: none;
-                    margin-left: 20px;
-                }
-
-                .faq-answer.show {
-                    display: block;
-                }
-            </style>
+                <div class="container-header">
+                    <div class="grid_5" id="social_icons">
+                        <a style="align-items: left;" itemprop="sameAs" href="https://github.com/Conferencex/"
+                            target="_blank" rel="noopener"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                
+                    <nav class="topmenu omega">
+                        <ul>
+                            <li>
+                                <address>
+                                    <a href="mailto:qudsira@bu.edu">Contact Us</a>
+                                </address>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </article>
         </div>
 
