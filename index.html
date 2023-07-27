@@ -388,15 +388,19 @@
                 <h2 class="major">Registration</h2>
 
                 <p>Details coming soon</p>
-                <!--
                 <p>Registration fee is $[TBD] for faculty and $[TBD] for students and includes snacks,
                     refreshments and lunches for the duration of conference. Please pay the registration
                     fee before filling out the registration form. The registration fee can be paid by
                     clicking the button below. Once you have made the payment, please note the
                     transaction ID and enter it in the registration form.</p>
-                <button style="background-color: #cc0000;" onclick="openPaymentLink()">Payment</button>
+                <button style="background-color: #cc0000;"
+                    onclick="window.open('https://www.bu.edu/csp/MAG-X-conference-registration/', '_blank')">Payment</button>
                 <hr>
                 <form action="https://formspree.io/f/mjvjjgow" method="POST">
+
+                    <input type="text" id="talk-title" name="talk-title"
+                        placeholder="Tentative title of the talk. Doesn't have to be exact" required>
+                    <label for="talk-title">Title of the talk<span style="color:red;">*</span></label>
 
                     <input type="text" id="rid" name="rid"
                         placeholder="Enter the Registration ID you received after making the payment" required>
@@ -472,8 +476,6 @@
                         }
                     }
                 </script>
-
-            -->
 
             </article>
 
